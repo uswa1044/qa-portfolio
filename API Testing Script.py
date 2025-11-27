@@ -38,3 +38,53 @@ def test_Update_user():
 
     for key, value in update_payload.items():
         assert response_body.get(key) == value, f"Mismatch for {key}: expected {value}, got {response_body.get(key)}"
+
+
+some chunck of API calls from univerty final year project:
+------------------------------------*****************---------------------------------------------
+
+
+API CALL    Method : POST
+
+const AddProgramme = async (Title, Description, Category, Date, NgoDetails) => {
+    const res = await fetch('http://localhost:3001/AddProgramme', {
+    method: 'POST',
+    body: JSON.stringify({
+        Title: Title,
+        Description: Description,
+        Category: Category,
+        Date: Date,
+        NGO: NgoDetails.Name
+    }),
+    headers: {
+        'Content-Type': 'application/json',
+    },
+});
+
+const result = await res.json();
+
+if (result.status === 'SUCCESS') {
+    toast.success('Programme Added Successfully');
+} else if (result.status === 'FAILURE') {
+toast.error("Error While Adding Programme");
+}
+};
+-----------------------------------*****************************------------------------------------
+API CALL   Method : delete 
+const DeletePost = async (ID) => {
+    const res = await fetch('http://localhost:3001/DeleteRestaurantPost', {
+    method: 'DELETE',
+    body: JSON.stringify({ id: ID }),
+    headers: {
+        'Content-Type': 'application/json',
+    },
+});
+
+const result = await res.json();
+
+if (result.status === 'SUCCESS') {
+    toast.success('Post Deleted Successfully');
+} else if (result.status === 'FAILURE') {
+toast.error("Error while deleting post. Kindly reload.");
+}
+};

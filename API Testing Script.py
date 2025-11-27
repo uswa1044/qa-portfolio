@@ -1,3 +1,9 @@
+------------------------------------------------------------------------------------
+Performed API testing on Reqres.in using Python requests, validating GET,
+POST, and PATCH endpoints with status codes, payload verification, and response validation.
+Tools Used: Selenium WebDriver, Python, ChromeDriver, Chrome DevTools 
+----------------------------------------------------------------------------------------
+
 import requests
 BASE_URL = "https://reqres.in/api"
 params = {"apiKey": "     "}
@@ -41,10 +47,11 @@ def test_Update_user():
 
 
 some chunck of API calls from univerty final year project:
+Tools : javascript
 ------------------------------------*****************---------------------------------------------
 
 
-API CALL    Method : POST
+-> API CALL    Method : POST
 
 const AddProgramme = async (Title, Description, Category, Date, NgoDetails) => {
     const res = await fetch('http://localhost:3001/AddProgramme', {
@@ -70,7 +77,7 @@ toast.error("Error While Adding Programme");
 }
 };
 -----------------------------------*****************************------------------------------------
-API CALL   Method : delete 
+->API CALL   Method : delete 
 const DeletePost = async (ID) => {
     const res = await fetch('http://localhost:3001/DeleteRestaurantPost', {
     method: 'DELETE',
@@ -88,3 +95,4 @@ if (result.status === 'SUCCESS') {
 toast.error("Error while deleting post. Kindly reload.");
 }
 };
+
